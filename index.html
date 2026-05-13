@@ -4,32 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mayura Manawadu | PhD Student</title>
+  <title>Mayura Manawadu | PhD Candidate · Mixed Reality</title>
   <meta name="author" content="Mayura Manawadu">
-  <meta name="description"
-    content="PhD Student at the University of Melbourne specializing in Mixed Reality, Computer Vision, and AI.">
+  <meta name="description" content="PhD Candidate at the University of Melbourne specializing in Mixed Reality, Computer Vision, and AI.">
   <link rel="shortcut icon" href="images/minion.png" type="image/png">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <!-- Placeholder for FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+  <canvas id="bg-canvas"></canvas>
 
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#home" class="nav-logo">Mayura</a>
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span><span class="logo-text">MM</span><span class="logo-bracket">]</span>
+      </a>
       <ul class="nav-menu">
         <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
         <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
         <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
         <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
         <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="#cv" class="nav-link">CV</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <div class="hamburger">
@@ -42,28 +42,155 @@
 
   <main>
     <!-- HOME SECTION -->
-    <section id="home" class="section active-section">
+    <section id="home" class="section hero-section">
       <div class="container home-container">
         <div class="home-text">
-          <h1 class="animate-text">Hi, I'm <span class="highlight-text">Mayura Manawadu</span></h1>
-          <h2 class="animate-text delay-1">PhD Student at The University of Melbourne</h2>
-          <p class="animate-text delay-2">
-            I research on mixed reality using panoramic RGB-D (360° + LiDAR) captures, focusing on enabling reliable
-            interaction and smooth navigation in real-world 360° scenes. This includes depth-based occlusion, contact,
-            and collision between virtual and captured environments, as well as generating intermediate views that allow
-            movement in-between and through panoramic nodes rather than simple teleportation.
+          <div class="status-badge animate-text">
+            <span class="status-dot"></span>
+            Open to Collaboration
+          </div>
+          <h1 class="animate-text delay-1">
+            Hi, I'm<br>
+            <span class="highlight-text">Mayura Manawadu</span>
+          </h1>
+          <h2 class="animate-text delay-2" style="min-height: 1.6em;">
+            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+          </h2>
+          <p class="animate-text delay-3">
+            I research <span class="inline-highlight">mixed reality</span> using panoramic RGB-D captures,
+            enabling reliable interaction and smooth navigation in real-world 360° scenes —
+            depth-based occlusion, contact, collision, and novel view synthesis for
+            free movement through panoramic environments.
           </p>
-          <div class="social-links animate-text delay-3">
-            <a href="mailto:mmayurapavan@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=5gONoloAAAAJ&hl=en" target="_blank"><i
-                class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.linkedin.com/in/mayuramanawadu/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/mayura_pavan" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/mayura1996" target="_blank"><i class="fab fa-github"></i></a>
+          <div class="home-actions animate-text delay-4">
+            <a href="#publications" class="btn btn-primary">View Research</a>
+            <a href="assets/cv.pdf" class="btn btn-secondary" target="_blank">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+          <div class="social-links animate-text delay-5">
+            <a href="mailto:mmayurapavan@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=5gONoloAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://www.linkedin.com/in/mayuramanawadu/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/mayura_pavan" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/mayura1996" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
         <div class="home-image animate-img">
-          <img src="images/Me.jpeg" alt="Mayura Manawadu">
+          <div class="image-frame">
+            <div class="frame-corner tl"></div>
+            <div class="frame-corner tr"></div>
+            <div class="frame-corner bl"></div>
+            <div class="frame-corner br"></div>
+            <img src="images/Me.jpeg" alt="Mayura Manawadu">
+          </div>
+          <div class="affiliation-badge">
+            <i class="fas fa-university"></i>
+            <span>University of Melbourne</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="stats-row animate-text delay-5">
+        <a href="https://scholar.google.com/citations?user=5gONoloAAAAJ&hl=en" target="_blank" class="stat-item stat-link" title="View on Google Scholar">
+          <span class="stat-number" data-target="28">0</span>
+          <span class="stat-label">Citations</span>
+        </a>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="8">0</span>
+          <span class="stat-label">Publications</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-label">h-index</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-label">Research Areas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH SECTION -->
+    <section id="research" class="section research-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">// focus areas</span>
+          <h2 class="section-title">Research</h2>
+        </div>
+
+        <div class="research-grid">
+          <div class="research-card primary-card reveal">
+            <div class="research-icon">
+              <i class="fas fa-vr-cardboard"></i>
+            </div>
+            <h3>Mixed Reality</h3>
+            <p>Enabling natural interaction between virtual objects and panoramic real-world environments — depth-based occlusion, contact, and collision in 360° scenes captured with RGB-D.</p>
+            <div class="research-tags">
+              <span class="tag">360° Imaging</span>
+              <span class="tag">Occlusion</span>
+              <span class="tag">RGB-D</span>
+              <span class="tag">LiDAR</span>
+            </div>
+          </div>
+
+          <div class="research-card reveal">
+            <div class="research-icon">
+              <i class="fas fa-cube"></i>
+            </div>
+            <h3>Computer Vision</h3>
+            <p>6DoF pose estimation from single RGB images in uncontrolled environments, focal length estimation, and 3D scene understanding for robotics and AR.</p>
+            <div class="research-tags">
+              <span class="tag">6DoF Pose</span>
+              <span class="tag">Depth Est.</span>
+              <span class="tag">CAD Retrieval</span>
+            </div>
+          </div>
+
+          <div class="research-card reveal">
+            <div class="research-icon">
+              <i class="fas fa-route"></i>
+            </div>
+            <h3>Novel View Synthesis</h3>
+            <p>Generating intermediate views for smooth free-roaming navigation between panoramic nodes — moving through captured scenes rather than teleporting between fixed viewpoints.</p>
+            <div class="research-tags">
+              <span class="tag">NeRF</span>
+              <span class="tag">View Synthesis</span>
+              <span class="tag">Navigation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Pipeline -->
+        <div class="research-pipeline reveal">
+          <div class="pipeline-step">
+            <div class="pipeline-icon"><i class="fas fa-camera-retro"></i></div>
+            <span>360° RGB-D Capture</span>
+          </div>
+          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="pipeline-step">
+            <div class="pipeline-icon"><i class="fas fa-layer-group"></i></div>
+            <span>Depth Fusion</span>
+          </div>
+          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="pipeline-step">
+            <div class="pipeline-icon"><i class="fas fa-project-diagram"></i></div>
+            <span>Scene Graph</span>
+          </div>
+          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="pipeline-step">
+            <div class="pipeline-icon"><i class="fas fa-vr-cardboard"></i></div>
+            <span>MR Interaction</span>
+          </div>
         </div>
       </div>
     </section>
@@ -71,23 +198,105 @@
     <!-- NEWS SECTION -->
     <section id="news" class="section">
       <div class="container">
-        <h2 class="section-title">News</h2>
-        <div class="news-grid">
-          <div class="news-item">
-            <div class="news-date">Dec 2024</div>
-            <div class="news-content">
-              <h3>Open Day Demo</h3>
-              <p>Showcased our latest Mixed Reality navigation system at the University of Melbourne Open Day.</p>
+        <div class="section-header reveal">
+          <span class="section-label">// latest updates</span>
+          <h2 class="section-title">News</h2>
+        </div>
+        <div class="scroll-section reveal">
+          <div class="news-timeline">
+
+            <div class="news-item">
+              <div class="news-dot"></div>
+              <div class="news-date-label">Oct 2025</div>
+              <div class="news-card">
+                <span class="news-badge badge-paper">Paper</span>
+                <h3>TARAR at IEEE ISMAR-Adjunct 2025</h3>
+                <p>Paper accepted and presented at the IEEE International Symposium on Mixed and Augmented Reality Adjunct, Daejeon, South Korea.</p>
+              </div>
             </div>
-          </div>
-          <div class="news-item">
-            <div class="news-date">2024</div>
-            <div class="news-content">
-              <h3>Started PhD</h3>
-              <p>Commenced my PhD journey at the University of Melbourne, focusing on MR and Panoramic Imaging.</p>
+
+            <div class="news-item">
+              <div class="news-dot"></div>
+              <div class="news-date-label">May 2025</div>
+              <div class="news-card">
+                <span class="news-badge badge-milestone">Milestone</span>
+                <h3>Started PhD at University of Melbourne</h3>
+                <p>Commenced PhD research at the University of Melbourne, focusing on Mixed Reality with panoramic RGB-D imaging and novel view synthesis.</p>
+              </div>
             </div>
+
+            <div class="news-item">
+              <div class="news-dot"></div>
+              <div class="news-date-label">May 2025</div>
+              <div class="news-card">
+                <span class="news-badge badge-milestone">Award</span>
+                <h3>Melbourne Research Scholarship</h3>
+                <p>Awarded the Melbourne Research Scholarship to support full-time PhD candidature at the University of Melbourne.</p>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-dot"></div>
+              <div class="news-date-label">Feb 2025</div>
+              <div class="news-card">
+                <span class="news-badge badge-milestone">Milestone</span>
+                <h3>MSc Completed — GPA 4.3/4.3</h3>
+                <p>Completed Master of Science at Kyungpook National University, South Korea. Thesis: A Decoupled Approach of 6DoF Object Pose and Camera Focal Length Estimation from Single RGB Image.</p>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-dot"></div>
+              <div class="news-date-label">Dec 2024</div>
+              <div class="news-card">
+                <span class="news-badge badge-demo">Demo</span>
+                <h3>Open Day Demo — University of Melbourne</h3>
+                <p>Showcased our latest Mixed Reality navigation system at the University of Melbourne Open Day, demonstrating panoramic RGB-D interaction.</p>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-dot"></div>
+              <div class="news-date-label">May 2024</div>
+              <div class="news-card">
+                <span class="news-badge badge-paper">Paper</span>
+                <h3>ICRA 2024 Workshop — Yokohama, Japan</h3>
+                <p>Presented work on 6DoF pose and focal length estimation at the Workshop on 3D Visual Representations for Robot Manipulation, ICRA 2024.</p>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-dot"></div>
+              <div class="news-date-label">Mar 2023</div>
+              <div class="news-card">
+                <span class="news-badge badge-milestone">Milestone</span>
+                <h3>KINGS Scholarship — Kyungpook National University</h3>
+                <p>Awarded the KINGS Scholarship to pursue an MSc in Electronic &amp; Electrical Engineering (AI &amp; Signal Processing) at Kyungpook National University, South Korea.</p>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-dot"></div>
+              <div class="news-date-label">Jul 2022</div>
+              <div class="news-card">
+                <span class="news-badge badge-milestone">Award</span>
+                <h3>Gold Medalist — University of Sri Jayewardenepura</h3>
+                <p>Awarded Gold Medal at the 48th Convocation for outstanding undergraduate academic and extracurricular performance in Computer Engineering.</p>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-dot"></div>
+              <div class="news-date-label">Feb 2021</div>
+              <div class="news-card">
+                <span class="news-badge badge-paper">Award</span>
+                <h3>Best Track Paper — ICARC 2021</h3>
+                <p>Received Best Track Paper Award in the Data Science &amp; Applications track at the International Conference on Advanced Research in Computing, Sabaragamuwa, Sri Lanka.</p>
+              </div>
+            </div>
+
           </div>
-          <!-- Add more news items here -->
+          <div class="scroll-hint"><span>scroll for more</span> <i class="fas fa-chevron-down"></i></div>
         </div>
       </div>
     </section>
@@ -95,99 +304,154 @@
     <!-- PUBLICATIONS SECTION -->
     <section id="publications" class="section">
       <div class="container">
-        <h2 class="section-title">Selected Publications</h2>
+        <div class="section-header reveal">
+          <span class="section-label">// academic work</span>
+          <h2 class="section-title">Publications</h2>
+        </div>
+        <div class="scroll-section reveal">
         <div class="publication-list">
 
           <div class="publication-item">
-            <div class="pub-year">2025</div>
+            <div class="pub-meta">
+              <span class="pub-year">2026</span>
+              <span class="pub-type workshop">Poster</span>
+            </div>
+            <div class="pub-details">
+              <h3>Free-View XR Tours Using 3D Gaussian Splatting with an Avatar Guide</h3>
+              <p class="authors"><strong>M Manawadu</strong>, SW Jeong, L Li, B Chen, T Rhee</p>
+              <p class="venue"><i class="fas fa-map-marker-alt"></i> IEEE VR 2026 · 33rd IEEE Conf. on Virtual Reality and 3D User Interfaces · Daegu, Korea</p>
+              <div class="pub-links">
+                <a href="projects/xr-tours/index.html" class="pub-link">
+                  <i class="fas fa-link"></i> Project
+                </a>
+                <a href="https://www.youtube.com/watch?v=Od2wjh4ugUk" class="pub-link" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <div class="pub-meta">
+              <span class="pub-year">2025</span>
+              <span class="pub-type conference">Conference</span>
+            </div>
             <div class="pub-details">
               <h3>TARAR: An Intelligent Tour Guide Avatar for Mobile Real-Time Augmented Reality in Heritage Sites</h3>
-              <p class="authors"><strong>M Manawadu</strong>, C Weerasooriya, G Chathuranga, M Wijesinghe, S
-                Wijayarathne, P Perera, T Rhee, U Wijenayake</p>
-              <p class="venue">2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct)
-              </p>
+              <p class="authors"><strong>M Manawadu</strong>, C Weerasooriya, G Chathuranga, M Wijesinghe, S Wijayarathne, P Perera, T Rhee, U Wijenayake</p>
+              <p class="venue"><i class="fas fa-map-marker-alt"></i> IEEE ISMAR-Adjunct 2025</p>
               <div class="pub-links">
-                <a href="https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00012" class="pub-link"
-                  target="_blank">Paper</a>
+                <a href="https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00012" class="pub-link" target="_blank">
+                  <i class="fas fa-file-pdf"></i> Paper
+                </a>
               </div>
             </div>
           </div>
 
           <div class="publication-item">
-            <div class="pub-year">2025</div>
+            <div class="pub-meta">
+              <span class="pub-year">2025</span>
+              <span class="pub-type journal">Journal</span>
+            </div>
             <div class="pub-details">
-              <h3>6-DoF Pose Estimation from Single RGB Image and CAD Model Retrieval Using Feature Similarity
-                Measurement</h3>
+              <h3>6-DoF Pose Estimation from Single RGB Image and CAD Model Retrieval Using Feature Similarity Measurement</h3>
               <p class="authors">S Park, WJ Jeong, <strong>M Manawadu</strong>, SY Park</p>
-              <p class="venue">Applied Sciences 15 (3)</p>
+              <p class="venue"><i class="fas fa-map-marker-alt"></i> Applied Sciences 15 (3)</p>
               <div class="pub-links">
-                <a href="https://doi.org/10.3390/app15031501" class="pub-link" target="_blank">Paper</a>
+                <a href="https://doi.org/10.3390/app15031501" class="pub-link" target="_blank">
+                  <i class="fas fa-file-pdf"></i> Paper
+                </a>
               </div>
             </div>
           </div>
 
           <div class="publication-item">
-            <div class="pub-year">2024</div>
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-type journal">Journal</span>
+            </div>
             <div class="pub-details">
               <h3>6DoF Object Pose and Focal Length Estimation from Single RGB Images in Uncontrolled Environments</h3>
               <p class="authors"><strong>M Manawadu</strong>, SY Park</p>
-              <p class="venue">Sensors 24 (17), 5474</p>
+              <p class="venue"><i class="fas fa-map-marker-alt"></i> Sensors 24 (17), 5474</p>
               <div class="pub-links">
-                <a href="https://doi.org/10.3390/s24175474" class="pub-link" target="_blank">Paper</a>
+                <a href="https://doi.org/10.3390/s24175474" class="pub-link" target="_blank">
+                  <i class="fas fa-file-pdf"></i> Paper
+                </a>
               </div>
             </div>
           </div>
 
           <div class="publication-item">
-            <div class="pub-year">2024</div>
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-type workshop">Workshop</span>
+            </div>
             <div class="pub-details">
               <h3>Enhancing 6DoF Pose and Focal Length Estimation from Uncontrolled RGB Images for Robotics Vision</h3>
               <p class="authors"><strong>M Manawadu</strong>, SY Park</p>
-              <p class="venue">ICRA 2024 Workshop on 3D Visual Representations for Robot Manipulation</p>
+              <p class="venue"><i class="fas fa-map-marker-alt"></i> ICRA 2024 · Workshop on 3D Visual Representations</p>
               <div class="pub-links">
-                <a href="https://openreview.net/forum?id=86w2P8g7tI" class="pub-link" target="_blank">Paper</a>
+                <a href="https://openreview.net/forum?id=86w2P8g7tI" class="pub-link" target="_blank">
+                  <i class="fas fa-file-pdf"></i> Paper
+                </a>
               </div>
             </div>
           </div>
 
           <div class="publication-item">
-            <div class="pub-year">2024</div>
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-type conference">Conference</span>
+            </div>
             <div class="pub-details">
-              <h3>Advancing 6D Pose Estimation in Augmented Reality--Overcoming Projection Ambiguity with Uncontrolled
-                Imagery</h3>
+              <h3>Advancing 6D Pose Estimation in Augmented Reality — Overcoming Projection Ambiguity with Uncontrolled Imagery</h3>
               <p class="authors"><strong>M Manawadu</strong>, S Park, SY Park</p>
-              <p class="venue">IPIU 2024</p>
+              <p class="venue"><i class="fas fa-map-marker-alt"></i> IPIU 2024</p>
               <div class="pub-links">
-                <a href="http://www.ipiu.or.kr/" class="pub-link" target="_blank">Conference</a>
+                <a href="http://www.ipiu.or.kr/" class="pub-link" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> Conference
+                </a>
               </div>
             </div>
           </div>
 
           <div class="publication-item">
-            <div class="pub-year">2023</div>
+            <div class="pub-meta">
+              <span class="pub-year">2023</span>
+              <span class="pub-type conference">Conference</span>
+            </div>
             <div class="pub-details">
               <h3>Predictive Analysis of Accidents Based on US Accident Data</h3>
               <p class="authors"><strong>M Manawadu</strong>, U Wijenayake</p>
-              <p class="venue">2023 14th International Conference on Information and Communication ...</p>
+              <p class="venue"><i class="fas fa-map-marker-alt"></i> ICICM 2023</p>
               <div class="pub-links">
-                <a href="https://arxiv.org/abs/2309.00908" class="pub-link" target="_blank">Paper</a>
+                <a href="https://arxiv.org/abs/2309.00908" class="pub-link" target="_blank">
+                  <i class="fas fa-file-pdf"></i> Paper
+                </a>
               </div>
             </div>
           </div>
 
           <div class="publication-item">
-            <div class="pub-year">2021</div>
+            <div class="pub-meta">
+              <span class="pub-year">2021</span>
+              <span class="pub-type conference">Conference</span>
+            </div>
             <div class="pub-details">
               <h3>Voice-Assisted Real-Time Traffic Sign Recognition System Using Convolutional Neural Network</h3>
               <p class="authors"><strong>M Manawadu</strong>, U Wijenayake</p>
-              <p class="venue">International Conference on Advanced Research in Computing</p>
+              <p class="venue"><i class="fas fa-map-marker-alt"></i> ICARC 2021</p>
               <div class="pub-links">
-                <a href="https://repo.lib.sab.ac.lk/xmlui/handle/123456789/4156" class="pub-link"
-                  target="_blank">Paper</a>
+                <a href="https://repo.lib.sab.ac.lk/xmlui/handle/123456789/4156" class="pub-link" target="_blank">
+                  <i class="fas fa-file-pdf"></i> Paper
+                </a>
               </div>
             </div>
           </div>
 
+        </div>
+        <div class="scroll-hint"><span>scroll for more</span> <i class="fas fa-chevron-down"></i></div>
         </div>
       </div>
     </section>
@@ -195,100 +459,123 @@
     <!-- PROJECTS SECTION -->
     <section id="projects" class="section">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
+        <div class="section-header reveal">
+          <span class="section-label">// what i've built</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
         <div class="project-grid">
 
-          <!-- Project 1 -->
-          <div class="project-card">
+          <div class="project-card reveal tilt-transition project-featured">
+            <div class="project-media">
+              <video muted autoplay loop playsinline>
+                <source src="projects/xr-tours/xrtours.mp4" type="video/mp4">
+              </video>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="projects/xr-tours/index.html"><i class="fas fa-link"></i> Project Page</a>
+                  <a href="https://www.youtube.com/watch?v=Od2wjh4ugUk" target="_blank"><i class="fab fa-youtube"></i> Video</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">IEEE VR 2026 · 3D Gaussian Splatting · XR</span>
+              <h3>Free-View XR Tours with 3D Gaussian Splatting</h3>
+              <p>An XR touring system for free-view exploration of photoreal 3DGS scenes, with an avatar guide delivering proximity-triggered narration. Demonstrated at IEEE VR 2026 with 50+ participants.</p>
+            </div>
+          </div>
+
+          <div class="project-card reveal tilt-transition">
             <div class="project-media">
               <video muted autoplay loop playsinline>
                 <source src="images/abhises2.mp4" type="video/mp4">
               </video>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="projects/abhises/index.html"><i class="fas fa-link"></i> Project Page</a>
+                  <a href="https://www.youtube.com/embed/3VhgjcyQQ4Q?si=r0srkJI4Qg3rd7bm&amp;start=113" target="_blank"><i class="fab fa-youtube"></i> Video</a>
+                </div>
+              </div>
             </div>
             <div class="project-info">
+              <span class="project-tag">AR · NLP · Computer Vision</span>
               <h3>Abhises: Intelligent Virtual Tour Guide</h3>
-              <p>An Intelligent Augmented Reality Tourist Guide leveraging Computer Vision and Deep NLP to simulate a
-                real guide's behavior.</p>
-              <div class="project-links">
-                <a href="abhises/index.html">Project Page</a>
-                <a href="https://www.youtube.com/embed/3VhgjcyQQ4Q?si=r0srkJI4Qg3rd7bm&amp;start=113">Video</a>
-              </div>
+              <p>An Intelligent Augmented Reality Tourist Guide leveraging Computer Vision and Deep NLP to simulate a real guide's behavior.</p>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-card">
+          <div class="project-card reveal tilt-transition">
             <div class="project-media">
               <video muted autoplay loop playsinline>
                 <source src="images/focalpose2.mp4" type="video/mp4">
               </video>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="projects/6dof/index.html"><i class="fas fa-link"></i> Project Page</a>
+                  <a href="https://www.youtube.com/embed/3VhgjcyQQ4Q?si=r0srkJI4Qg3rd7bm&amp;start=113" target="_blank"><i class="fab fa-youtube"></i> Video</a>
+                </div>
+              </div>
             </div>
             <div class="project-info">
+              <span class="project-tag">Computer Vision · Robotics</span>
               <h3>6DoF Pose & Focal Length Estimation</h3>
-              <p>A two-stage approach for accurate 6DoF pose estimation in robotics, addressing challenges with single
-                RGB images in uncontrolled environments.</p>
-              <div class="project-links">
-                <a href="6DoF/index.html">Project Page</a>
-                <a href="https://www.youtube.com/embed/3VhgjcyQQ4Q?si=r0srkJI4Qg3rd7bm&amp;start=113">Video</a>
-              </div>
+              <p>A two-stage approach for accurate 6DoF pose estimation in robotics, addressing challenges with single RGB images in uncontrolled environments.</p>
             </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="project-card">
+          <div class="project-card reveal tilt-transition">
             <div class="project-media">
               <video muted autoplay loop playsinline>
                 <source src="images/VoiceAssitedRealtimeAccidentPredictionSystem.mp4" type="video/mp4">
               </video>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="projects/accident-prediction/index.html"><i class="fas fa-link"></i> Project Page</a>
+                  <a href="https://youtu.be/syQGJfk4cGQ" target="_blank"><i class="fab fa-youtube"></i> Video</a>
+                </div>
+              </div>
             </div>
             <div class="project-info">
+              <span class="project-tag">ML · Data Science · Safety</span>
               <h3>Accident Prediction System</h3>
-              <p>Predictive system utilizing US accident data to accurately forecast road accidents and enhance safety.
-              </p>
-              <div class="project-links">
-                <a href="zipnerf/index.html">Project Page</a>
-                <a href="https://youtu.be/syQGJfk4cGQ">Video</a>
-              </div>
+              <p>Predictive system utilizing US accident data to accurately forecast road accidents and enhance safety.</p>
             </div>
           </div>
 
-          <!-- Project 4 -->
-          <div class="project-card">
+          <div class="project-card reveal tilt-transition">
             <div class="project-media">
               <video muted autoplay loop playsinline>
                 <source src="images/TrafficCropped.mp4" type="video/mp4">
               </video>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="projects/traffic-sign/index.html"><i class="fas fa-link"></i> Project Page</a>
+                  <a href="https://youtu.be/syQGJfk4cGQ" target="_blank"><i class="fab fa-youtube"></i> Video</a>
+                </div>
+              </div>
             </div>
             <div class="project-info">
+              <span class="project-tag">CNN · Real-time · Voice AI</span>
               <h3>Traffic Sign Recognition</h3>
-              <p>Voice-assisted traffic sign recognition system using CNNs, achieving real-time detection with high
-                accuracy.</p>
-              <div class="project-links">
-                <a href="trafficsign/index.html">Project Page</a>
-                <a href="https://youtu.be/syQGJfk4cGQ">Video</a>
-              </div>
+              <p>Voice-assisted traffic sign recognition system using CNNs, achieving real-time detection with high accuracy.</p>
             </div>
           </div>
 
-
-
-          <!-- Project 5 -->
-          <div class="project-card">
+          <div class="project-card reveal tilt-transition">
             <div class="project-media">
               <video muted autoplay loop playsinline>
                 <source src="images/CPPCricketGame.mp4" type="video/mp4">
               </video>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="projects/cricket-game/index.html"><i class="fas fa-link"></i> Project Page</a>
+                  <a href="https://github.com/mayura1996/Cricket_Game_using-Cpp" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+              </div>
             </div>
             <div class="project-info">
+              <span class="project-tag">C++ · Game · 1st Place</span>
               <h3>Console-Based Cricket Game</h3>
-              <p>A C++ console game featuring real-time animations and dynamic player positioning, built from scratch
-                using core programming concepts. Winner (1st Place) of the 'Programming for Engineers' course
-                competition.
-              </p>
-              <div class="project-links">
-                <a href="cricket-game/index.html">Project Page</a>
-                <a href="https://github.com/mayura1996/Cricket_Game_using-Cpp" target="_blank">GitHub</a>
-              </div>
+              <p>A C++ console game featuring real-time animations and dynamic player positioning. Winner (1st Place) of the 'Programming for Engineers' course competition.</p>
             </div>
           </div>
 
@@ -299,70 +586,40 @@
     <!-- BLOG SECTION -->
     <section id="blog" class="section">
       <div class="container">
-        <h2 class="section-title">Travel Blog</h2>
+        <div class="section-header reveal">
+          <span class="section-label">// beyond research</span>
+          <h2 class="section-title">Travel Blog</h2>
+        </div>
         <div class="blog-container-wrapper">
           <button class="scroll-btn left" onclick="scrollBlog('left')"><i class="fas fa-chevron-left"></i></button>
 
           <div class="blog-grid">
             <!-- Blog Post 1: July 2024 -->
-            <div id="blog-post-1" class="blog-card" onclick="location.href='blog/1_trafalgar-trip.html'"
-              style="cursor: pointer;">
+            <div id="blog-post-1" class="blog-card reveal tilt-transition" onclick="location.href='blog/1_trafalgar-trip.html'" style="cursor: pointer;">
               <div class="blog-media tiktok-thumbnail">
                 <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7548394653091941640"
-                  data-video-id="7548394653091941640" style="max-width: 605px;min-width: 325px;">
-                  <section> <a target="_blank" title="@mayu_mmp"
-                      href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> <a title="srilanka"
-                      target="_blank" href="https://www.tiktok.com/tag/srilanka?refer=embed">#srilanka</a> <a
-                      title="sinhala" target="_blank" href="https://www.tiktok.com/tag/sinhala?refer=embed">#sinhala</a>
-                    <a title="australiasrilanka" target="_blank"
-                      href="https://www.tiktok.com/tag/australiasrilanka?refer=embed">#australiasrilanka</a> <a
-                      title="srilankan_tik_tok🇱🇰" target="_blank"
-                      href="https://www.tiktok.com/tag/srilankan_tik_tok%F0%9F%87%B1%F0%9F%87%B0?refer=embed">#srilankan_tik_tok🇱🇰</a>
-                    <a title="fyi" target="_blank" href="https://www.tiktok.com/tag/fyi?refer=embed">#fyi</a> <a
-                      target="_blank" title="♬ original sound - akasasutra - AkasaSutra"
-                      href="https://www.tiktok.com/music/original-sound-akasasutra-7530934066972297985?refer=embed">♬
-                      original sound - akasasutra - AkasaSutra</a>
-                  </section>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7548394653091941640" data-video-id="7548394653091941640" style="max-width: 605px;min-width: 325px;">
+                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> <a title="srilanka" target="_blank" href="https://www.tiktok.com/tag/srilanka?refer=embed">#srilanka</a> <a title="sinhala" target="_blank" href="https://www.tiktok.com/tag/sinhala?refer=embed">#sinhala</a> <a title="australiasrilanka" target="_blank" href="https://www.tiktok.com/tag/australiasrilanka?refer=embed">#australiasrilanka</a> <a target="_blank" title="♬ original sound - akasasutra - AkasaSutra" href="https://www.tiktok.com/music/original-sound-akasasutra-7530934066972297985?refer=embed">♬ original sound - akasasutra - AkasaSutra</a></section>
                 </blockquote>
                 <script async src="https://www.tiktok.com/embed.js"></script>
               </div>
               <div class="blog-info">
                 <div class="blog-header">
                   <span class="blog-date">July 2024</span>
-                  <span class="blog-tag">Travel</span>
+                  <span class="blog-tag">Nature</span>
                 </div>
-                <h3>Trip to Trafalgar</h3>
-                <p>A 3-day getaway with the Unimelb HCI group. Taking a break from research to bond and recharge.</p>
-                <a href="blog/1_trafalgar-trip.html" class="blog-link">Watch Story <i
-                    class="fas fa-play-circle"></i></a>
+                <h3>Redwood Forest Escape</h3>
+                <p>Walking through towering ancient redwoods. One of those moments that puts everything in perspective.</p>
+                <a href="blog/1_trafalgar-trip.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
               </div>
             </div>
 
             <!-- Blog Post 2: July 2024 -->
-            <div id="blog-post-2" class="blog-card" onclick="location.href='blog/2_city-fixing-me.html'"
-              style="cursor: pointer;">
+            <div id="blog-post-2" class="blog-card reveal tilt-transition" onclick="location.href='blog/2_city-fixing-me.html'" style="cursor: pointer;">
               <div class="blog-media tiktok-thumbnail">
                 <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7549027634445946130"
-                  data-video-id="7549027634445946130" style="max-width: 605px;min-width: 325px;">
-                  <section> <a target="_blank" title="@mayu_mmp"
-                      href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> This city is fixing me <a
-                      title="srilankan_tik_tok🇱🇰" target="_blank"
-                      href="https://www.tiktok.com/tag/srilankan_tik_tok%F0%9F%87%B1%F0%9F%87%B0?refer=embed">#srilankan_tik_tok🇱🇰</a>
-                    <a title="onemillionaudition" target="_blank"
-                      href="https://www.tiktok.com/tag/onemillionaudition?refer=embed">#onemillionaudition</a> <a
-                      title="australiasrilanka" target="_blank"
-                      href="https://www.tiktok.com/tag/australiasrilanka?refer=embed">#australiasrilanka</a> <a
-                      title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a
-                      title="srilanka" target="_blank"
-                      href="https://www.tiktok.com/tag/srilanka?refer=embed">#srilanka</a> <a target="_blank"
-                      title="♬ original sound - C_Sangeeth"
-                      href="https://www.tiktok.com/music/original-sound-7533314631520668433?refer=embed">♬ original
-                      sound
-                      -
-                      C_Sangeeth</a>
-                  </section>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7549027634445946130" data-video-id="7549027634445946130" style="max-width: 605px;min-width: 325px;">
+                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> This city is fixing me <a title="srilankan_tik_tok🇱🇰" target="_blank" href="https://www.tiktok.com/tag/srilankan_tik_tok%F0%9F%87%B1%F0%9F%87%B0?refer=embed">#srilankan_tik_tok🇱🇰</a> <a target="_blank" title="♬ original sound - C_Sangeeth" href="https://www.tiktok.com/music/original-sound-7533314631520668433?refer=embed">♬ original sound - C_Sangeeth</a></section>
                 </blockquote>
                 <script async src="https://www.tiktok.com/embed.js"></script>
               </div>
@@ -371,35 +628,18 @@
                   <span class="blog-date">July 2024</span>
                   <span class="blog-tag">Life</span>
                 </div>
-                <h3>This City is Fixing Me</h3>
-                <p>Finding peace and healing in the streets of Melbourne.</p>
-                <a href="blog/2_city-fixing-me.html" class="blog-link">Watch Story <i
-                    class="fas fa-play-circle"></i></a>
+                <h3>Life in Melbourne</h3>
+                <p>Settling into a new city — the coffee, the laneways, and learning to call Melbourne home.</p>
+                <a href="blog/2_city-fixing-me.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
               </div>
             </div>
 
             <!-- Blog Post 3: Aug 2024 -->
-            <div id="blog-post-3" class="blog-card" onclick="location.href='blog/3_peaceful-moments.html'"
-              style="cursor: pointer;">
+            <div id="blog-post-3" class="blog-card reveal tilt-transition" onclick="location.href='blog/3_peaceful-moments.html'" style="cursor: pointer;">
               <div class="blog-media tiktok-thumbnail">
                 <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7558132061211593992"
-                  data-video-id="7558132061211593992" style="max-width: 605px;min-width: 325px;">
-                  <section> <a target="_blank" title="@mayu_mmp"
-                      href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> How peaceful their lives are
-                    @Kasun🇱🇰🇦🇺 @dinu_hesh97 <a title="srilanka_aus" target="_blank"
-                      href="https://www.tiktok.com/tag/srilanka_aus?refer=embed">#srilanka_aus</a> <a title="srilanka"
-                      target="_blank" href="https://www.tiktok.com/tag/srilanka?refer=embed">#srilanka</a> <a
-                      title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a
-                      title="srilankatiktok🇱🇰" target="_blank"
-                      href="https://www.tiktok.com/tag/srilankatiktok%F0%9F%87%B1%F0%9F%87%B0?refer=embed">#srilankatiktok🇱🇰</a>
-                    <a title="trending" target="_blank"
-                      href="https://www.tiktok.com/tag/trending?refer=embed">#trending</a> <a target="_blank"
-                      title="♬ original sound - Dinakshie Saranga"
-                      href="https://www.tiktok.com/music/original-sound-7551696388539599617?refer=embed">♬ original
-                      sound
-                      - Dinakshie Saranga</a>
-                  </section>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7558132061211593992" data-video-id="7558132061211593992" style="max-width: 605px;min-width: 325px;">
+                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> How peaceful their lives are <a title="srilanka_aus" target="_blank" href="https://www.tiktok.com/tag/srilanka_aus?refer=embed">#srilanka_aus</a> <a target="_blank" title="♬ original sound - Dinakshie Saranga" href="https://www.tiktok.com/music/original-sound-7551696388539599617?refer=embed">♬ original sound - Dinakshie Saranga</a></section>
                 </blockquote>
                 <script async src="https://www.tiktok.com/embed.js"></script>
               </div>
@@ -410,34 +650,16 @@
                 </div>
                 <h3>Peaceful Moments</h3>
                 <p>Taking a break from the PhD grind to appreciate the stillness of nature with good friends.</p>
-                <a href="blog/3_peaceful-moments.html" class="blog-link">Watch Story <i
-                    class="fas fa-play-circle"></i></a>
+                <a href="blog/3_peaceful-moments.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
               </div>
             </div>
 
             <!-- Blog Post 4: Aug 2024 -->
-            <div id="blog-post-4" class="blog-card" onclick="location.href='blog/4_camping-horsham.html'"
-              style="cursor: pointer;">
+            <div id="blog-post-4" class="blog-card reveal tilt-transition" onclick="location.href='blog/4_camping-horsham.html'" style="cursor: pointer;">
               <div class="blog-media tiktok-thumbnail">
                 <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7557336609339804936"
-                  data-video-id="7557336609339804936" style="max-width: 605px;min-width: 325px;">
-                  <section> <a target="_blank" title="@mayu_mmp"
-                      href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> Camping in Horsham, Victoria-
-                    Walkers Lake @Kasun🇱🇰🇦🇺 @dinu_hesh97 <a title="fyp" target="_blank"
-                      href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="srilankatiktok🇱🇰"
-                      target="_blank"
-                      href="https://www.tiktok.com/tag/srilankatiktok%F0%9F%87%B1%F0%9F%87%B0?refer=embed">#srilankatiktok🇱🇰</a>
-                    <a title="australia" target="_blank"
-                      href="https://www.tiktok.com/tag/australia?refer=embed">#australia</a> <a title="srilanka"
-                      target="_blank" href="https://www.tiktok.com/tag/srilanka?refer=embed">#srilanka</a> <a
-                      title="srilanka_aus" target="_blank"
-                      href="https://www.tiktok.com/tag/srilanka_aus?refer=embed">#srilanka_aus</a> <a target="_blank"
-                      title="♬ Snow On The Beach - Taylor Swift"
-                      href="https://www.tiktok.com/music/Snow-On-The-Beach-7156822419338954754?refer=embed">♬ Snow On
-                      The
-                      Beach - Taylor Swift</a>
-                  </section>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7557336609339804936" data-video-id="7557336609339804936" style="max-width: 605px;min-width: 325px;">
+                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> Camping in Horsham, Victoria - Walkers Lake <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ Snow On The Beach - Taylor Swift" href="https://www.tiktok.com/music/Snow-On-The-Beach-7156822419338954754?refer=embed">♬ Snow On The Beach - Taylor Swift</a></section>
                 </blockquote>
                 <script async src="https://www.tiktok.com/embed.js"></script>
               </div>
@@ -448,63 +670,36 @@
                 </div>
                 <h3>Camping in Horsham</h3>
                 <p>Under the stars at Walkers Lake. A perfect weekend getaway with friends.</p>
-                <a href="blog/4_camping-horsham.html" class="blog-link">Watch Story <i
-                    class="fas fa-play-circle"></i></a>
+                <a href="blog/4_camping-horsham.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
               </div>
             </div>
 
             <!-- Blog Post 5: Oct 2024 -->
-            <div id="blog-post-5" class="blog-card" onclick="location.href='blog/5_life-in-australia.html'"
-              style="cursor: pointer;">
+            <div id="blog-post-5" class="blog-card reveal tilt-transition" onclick="location.href='blog/5_life-in-australia.html'" style="cursor: pointer;">
               <div class="blog-media tiktok-thumbnail">
                 <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7577402364173258004"
-                  data-video-id="7577402364173258004" style="max-width: 605px;min-width: 325px;">
-                  <section> <a target="_blank" title="@mayu_mmp"
-                      href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> <a title="australia"
-                      target="_blank" href="https://www.tiktok.com/tag/australia?refer=embed">#australia</a> <a
-                      title="srilankan" target="_blank"
-                      href="https://www.tiktok.com/tag/srilankan?refer=embed">#srilankan</a> <a title="auslanka"
-                      target="_blank" href="https://www.tiktok.com/tag/auslanka?refer=embed">#auslanka</a> <a
-                      target="_blank" title="♬ Madhurabani - Yasas Medagedara"
-                      href="https://www.tiktok.com/music/Madhurabani-7159377828427876354?refer=embed">♬ Madhurabani -
-                      Yasas Medagedara</a> </section>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7577402364173258004" data-video-id="7577402364173258004" style="max-width: 605px;min-width: 325px;">
+                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> <a title="australia" target="_blank" href="https://www.tiktok.com/tag/australia?refer=embed">#australia</a> <a target="_blank" title="♬ Madhurabani - Yasas Medagedara" href="https://www.tiktok.com/music/Madhurabani-7159377828427876354?refer=embed">♬ Madhurabani - Yasas Medagedara</a></section>
                 </blockquote>
                 <script async src="https://www.tiktok.com/embed.js"></script>
               </div>
               <div class="blog-info">
                 <div class="blog-header">
                   <span class="blog-date">Oct 2024</span>
-                  <span class="blog-tag">Life</span>
+                  <span class="blog-tag">Travel</span>
                 </div>
-                <h3>Sri Lankan Vibes in Australia</h3>
-                <p>Finding a piece of home thousands of miles away. An evening of music, community, and celebration.</p>
-                <a href="blog/5_life-in-australia.html" class="blog-link">Watch Story <i
-                    class="fas fa-play-circle"></i></a>
+                <h3>Trip to Trafalgar</h3>
+                <p>A weekend escape from Melbourne with the Unimelb HCI group — forests, fresh air, and good company.</p>
+                <a href="blog/5_life-in-australia.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
               </div>
             </div>
 
             <!-- Blog Post 6: Jan 2025 -->
-            <div id="blog-post-6" class="blog-card" onclick="location.href='blog/6_summer-break-sri-lanka.html'"
-              style="cursor: pointer;">
+            <div id="blog-post-6" class="blog-card reveal tilt-transition" onclick="location.href='blog/6_summer-break-sri-lanka.html'" style="cursor: pointer;">
               <div class="blog-media tiktok-thumbnail">
                 <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7587831358265822485"
-                  data-video-id="7587831358265822485" style="max-width: 605px;min-width: 325px;">
-                  <section> <a target="_blank" title="@mayu_mmp"
-                      href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> 2025 Summer Break - Sri Lanka
-                    @inusha <a title="capcut" target="_blank"
-                      href="https://www.tiktok.com/tag/capcut?refer=embed">#CapCut</a> <a title="srilanka"
-                      target="_blank" href="https://www.tiktok.com/tag/srilanka?refer=embed">#srilanka</a> <a
-                      title="auslanka" target="_blank"
-                      href="https://www.tiktok.com/tag/auslanka?refer=embed">#auslanka</a> <a title="korealanka"
-                      target="_blank" href="https://www.tiktok.com/tag/korealanka?refer=embed">#korealanka</a> <a
-                      title="homecoming" target="_blank"
-                      href="https://www.tiktok.com/tag/homecoming?refer=embed">#Homecoming</a> <a target="_blank"
-                      title="♬ original sound - Mayura 🇱🇰🇦🇺"
-                      href="https://www.tiktok.com/music/original-sound-7587831675763247879?refer=embed">♬ original
-                      sound
-                      - Mayura 🇱🇰🇦🇺</a> </section>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7587831358265822485" data-video-id="7587831358265822485" style="max-width: 605px;min-width: 325px;">
+                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> 2025 Summer Break - Sri Lanka <a title="srilanka" target="_blank" href="https://www.tiktok.com/tag/srilanka?refer=embed">#srilanka</a> <a target="_blank" title="♬ original sound - Mayura 🇱🇰🇦🇺" href="https://www.tiktok.com/music/original-sound-7587831675763247879?refer=embed">♬ original sound - Mayura 🇱🇰🇦🇺</a></section>
                 </blockquote>
                 <script async src="https://www.tiktok.com/embed.js"></script>
               </div>
@@ -513,31 +708,14 @@
                   <span class="blog-date">Jan 2025</span>
                   <span class="blog-tag">Adventure</span>
                 </div>
-                <h3>Summer Break - Sri Lanka</h3>
-                <p>Back in Sri Lanka! The waves, the food, and the vibes are unmatched. Check out my summer highlights.
-                </p>
-                <a href="blog/6_summer-break-sri-lanka.html" class="blog-link">Watch Story <i
-                    class="fas fa-play-circle"></i></a>
+                <h3>Summer Break — Sri Lanka</h3>
+                <p>Back in Sri Lanka! The waves, the food, and the vibes are unmatched. Check out my summer highlights.</p>
+                <a href="blog/6_summer-break-sri-lanka.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
               </div>
             </div>
           </div>
 
           <button class="scroll-btn right" onclick="scrollBlog('right')"><i class="fas fa-chevron-right"></i></button>
-        </div>
-
-      </div>
-
-
-    </section>
-
-    <!-- CV SECTION -->
-    <section id="cv" class="section">
-      <div class="container">
-        <h2 class="section-title">Curriculum Vitae</h2>
-        <div class="cv-container">
-          <p>You can view or download my full CV below.</p>
-          <a href="data/Mayura_s_CV2.pdf" class="btn btn-primary" target="_blank">Download CV</a>
-          <!-- Optional: Embed PDF viewer here if desired, for now just a download link is standard -->
         </div>
       </div>
     </section>
@@ -545,16 +723,26 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-          <p>Feel free to reach out for collaborations or just a chat.</p>
-          <a href="mailto:mmayurapavan@gmail.com" class="contact-email">mmayurapavan@gmail.com</a>
+        <div class="section-header reveal">
+          <span class="section-label">// let's connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+        </div>
+        <div class="contact-content reveal">
+          <p class="contact-intro">Open to research collaborations, discussions about Mixed Reality and Computer Vision, or just a friendly chat.</p>
+          <a href="mailto:mmayurapavan@gmail.com" class="contact-email">
+            <i class="fas fa-envelope"></i>
+            mmayurapavan@gmail.com
+          </a>
+          <div class="contact-actions">
+            <a href="assets/cv.pdf" class="btn btn-primary" target="_blank">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
           <div class="social-links large">
-            <a href="https://scholar.google.com/citations?user=5gONoloAAAAJ&hl=en" target="_blank"><i
-                class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.linkedin.com/in/mayuramanawadu/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/mayura_pavan" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/mayura1996" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?user=5gONoloAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://www.linkedin.com/in/mayuramanawadu/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/mayura_pavan" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/mayura1996" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
       </div>
@@ -563,7 +751,10 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Mayura Manawadu. Design inspired by modern portfolios.</p>
+    <div class="footer-content">
+      <span class="footer-logo"><span class="logo-bracket">[</span>MM<span class="logo-bracket">]</span></span>
+      <p>Mayura Manawadu · PhD Candidate · University of Melbourne · &copy; 2025</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

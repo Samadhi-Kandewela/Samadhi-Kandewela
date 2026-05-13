@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free-View XR Tours with 3DGS | Mayura Manawadu</title>
+  <meta name="author" content="Mayura Manawadu">
+  <meta name="description" content="An XR touring system using 3D Gaussian Splatting with an avatar guide. Presented at IEEE VR 2026, Daegu, Korea.">
+  <link rel="shortcut icon" href="../../images/minion.png" type="image/png">
+  <link rel="stylesheet" href="../../stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <span class="logo-bracket">[</span><span class="logo-text">MM</span><span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../../index.html#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../../index.html#research" class="nav-link">Research</a></li>
+        <li class="nav-item"><a href="../../index.html#publications" class="nav-link">Publications</a></li>
+        <li class="nav-item"><a href="../../index.html#projects" class="nav-link active">Projects</a></li>
+        <li class="nav-item"><a href="../../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <article class="project-page-section section">
+      <div class="container project-page-container">
+
+        <a href="../../index.html#projects" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+
+        <header class="project-page-header">
+          <div class="project-meta-tags">
+            <span class="pub-type conference">IEEE VR 2026</span>
+            <span class="tag">3D Gaussian Splatting</span>
+            <span class="tag">Mixed Reality</span>
+            <span class="tag">Avatar Guide</span>
+            <span class="tag">Meta Quest 3</span>
+          </div>
+          <h1>Free-View XR Tours Using 3D Gaussian Splatting with an Avatar Guide</h1>
+          <p class="project-authors">
+            <strong>Mayura Manawadu</strong> · SeungWon Jeong · Lingxiao Li · Bin Chen · Taehyun James Rhee
+          </p>
+          <p class="project-venue">
+            <i class="fas fa-map-marker-alt"></i> The 33rd IEEE Conference on Virtual Reality and 3D User Interfaces · Daegu, Korea · Booth #211<br>
+            <i class="fas fa-university"></i> School of Computing and Information Systems · The University of Melbourne
+          </p>
+          <div class="project-page-actions">
+            <a href="https://www.youtube.com/watch?v=Od2wjh4ugUk" target="_blank" class="btn btn-primary">
+              <i class="fab fa-youtube"></i> Watch Video
+            </a>
+          </div>
+        </header>
+
+        <!-- Hero video (local autoplay) -->
+        <div class="project-hero-video">
+          <video controls muted autoplay loop playsinline poster="https://img.youtube.com/vi/Od2wjh4ugUk/maxresdefault.jpg">
+            <source src="xrtours.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Abstract -->
+        <section class="project-section">
+          <h2><span class="section-mono">// abstract</span></h2>
+          <p>XR tours are often built from manual 3D authoring, 3D scanning, photogrammetry, or fixed-view 360° video, which can be time-consuming to produce or limit free exploration. <strong>3D Gaussian Splatting (3DGS)</strong> offers photoreal free-view rendering from captured imagery, yet its use in end-to-end XR touring experiences — especially with lightweight in-scene guidance — remains underexplored.</p>
+          <p>We present an XR tour system for free-view exploration of 3DGS scenes that combines controller-based 6-DoF navigation with an avatar guide delivering proximity-triggered text-to-speech narration. We demonstrate the system in a public setting and report observations from a case study with <strong>more than 50 participants</strong>.</p>
+        </section>
+
+        <!-- Poster (view only — toolbar hidden) -->
+        <section class="project-section">
+          <h2><span class="section-mono">// poster</span></h2>
+          <div class="poster-embed poster-view-only">
+            <object data="Poster-Mayura.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" type="application/pdf">
+              <div class="poster-fallback">
+                <i class="fas fa-file-pdf"></i>
+                <p>Your browser cannot display the PDF inline.</p>
+              </div>
+            </object>
+          </div>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <span class="footer-logo"><span class="logo-bracket">[</span>MM<span class="logo-bracket">]</span></span>
+      <p>Mayura Manawadu · PhD Candidate · University of Melbourne · &copy; 2025</p>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+</body>
+
+</html>

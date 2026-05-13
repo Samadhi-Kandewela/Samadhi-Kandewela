@@ -1,0 +1,54 @@
+/* Dark Mode Override for Bootstrap Project Pages */
+body {
+    background-color: #0a0a0a !important;
+    color: #d0d0d0 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ffffff !important;
+}
+
+a {
+    color: #4facfe !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #00f2fe !important;
+    text-decoration: underline !important;
+}
+
+.text-center b {
+    color: #ffffff !important;
+}
+
+/* Bootstrap specific overrides */
+.nav-pills>li>a {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+.nav-pills>li>a:hover {
+    background-color: #333 !important;
+}
+
+/* Ensure images/videos look okay */
+img,
+video {
+    opacity: 0.95;
+    border-radius: 8px;
+}
+
+/* Fix Bibtex text area */
+textarea#bibtex {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #333 !important;
+}
