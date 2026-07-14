@@ -1,11 +1,20 @@
-# Mayura Manawadu — Portfolio
+# Samadhi Kandewela — Portfolio
 
-Personal academic website of Mayura Manawadu, PhD Candidate at the University of Melbourne — Mixed Reality, Computer Vision, Novel View Synthesis.
+Personal portfolio website for Samadhi Kandewela, a Computer Engineering undergraduate focused on software engineering, scalable backend systems, full-stack development, and applied machine learning.
 
-Live: https://mayura1996.github.io/Mayura/
+## Sections
 
+- Profile and professional focus
+- Software engineering experience
+- Selected software and machine learning projects
+- Technical skills
+- Education, certifications, and leadership
+- Contact details and resume
 
+## Run locally
 
-## Development
+This is a static website with no build step. Open `index.html` directly in a browser or serve the directory with any static file server.
 
-It's a static site — no build step. Open `index.html` in a browser or serve the folder over any static HTTP server.
+## Deployment
+
+The site is ready for GitHub Pages. After moving it to Samadhi's repository, enable Pages from the repository settings and deploy from the `main` branch.

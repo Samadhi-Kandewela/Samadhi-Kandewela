@@ -1,763 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mayura Manawadu | PhD Candidate · Mixed Reality</title>
-  <meta name="author" content="Mayura Manawadu">
-  <meta name="description" content="PhD Candidate at the University of Melbourne specializing in Mixed Reality, Computer Vision, and AI.">
-  <link rel="shortcut icon" href="images/minion.png" type="image/png">
-  <link rel="stylesheet" href="stylesheet.css">
+  <meta name="description" content="Portfolio of Samadhi Kandewela, a Computer Engineering undergraduate building scalable software and applied AI systems.">
+  <meta name="author" content="Samadhi Kandewela">
+  <meta name="theme-color" content="#0a1015">
+  <title>Samadhi Kandewela | Software Engineer &amp; ML Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
-
 <body>
-  <canvas id="bg-canvas"></canvas>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">
-        <span class="logo-bracket">[</span><span class="logo-text">MM</span><span class="logo-bracket">]</span>
+  <header class="site-header" id="top">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Samadhi Kandewela, home">
+        <span class="brand-mark">SK</span>
+        <span class="brand-name">Samadhi Kandewela</span>
       </a>
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-        <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
-        <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
-        <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <main>
-    <!-- HOME SECTION -->
-    <section id="home" class="section hero-section">
-      <div class="container home-container">
-        <div class="home-text">
-          <div class="status-badge animate-text">
-            <span class="status-dot"></span>
-            Open to Collaboration
-          </div>
-          <h1 class="animate-text delay-1">
-            Hi, I'm<br>
-            <span class="highlight-text">Mayura Manawadu</span>
-          </h1>
-          <h2 class="animate-text delay-2" style="min-height: 1.6em;">
-            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
-          </h2>
-          <p class="animate-text delay-3">
-            I research <span class="inline-highlight">mixed reality</span> using panoramic RGB-D captures,
-            enabling reliable interaction and smooth navigation in real-world 360° scenes —
-            depth-based occlusion, contact, collision, and novel view synthesis for
-            free movement through panoramic environments.
-          </p>
-          <div class="home-actions animate-text delay-4">
-            <a href="#publications" class="btn btn-primary">View Research</a>
-            <a href="assets/cv.pdf" class="btn btn-secondary" target="_blank">
-              <i class="fas fa-download"></i> Download CV
-            </a>
-          </div>
-          <div class="social-links animate-text delay-5">
-            <a href="mailto:mmayurapavan@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=5gONoloAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.linkedin.com/in/mayuramanawadu/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/mayura_pavan" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/mayura1996" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          </div>
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-media" src="images/software-engineering-hero.png" alt="Modern software engineering workstation displaying code and system architecture">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Computer Engineering · Software &amp; AI</p>
+        <h1 id="hero-title">Samadhi<br>Kandewela</h1>
+        <p class="hero-role">I build dependable software and intelligent systems that turn complex problems into practical products.</p>
+        <p class="hero-summary">Final-year Computer Engineering undergraduate focused on backend engineering, scalable microservices, full-stack development, and applied machine learning.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+          <a class="button button-ghost" href="assets/Samadhi-Kandewela-Resume.pdf" target="_blank" rel="noopener">View resume <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
-        <div class="home-image animate-img">
-          <div class="image-frame">
-            <div class="frame-corner tl"></div>
-            <div class="frame-corner tr"></div>
-            <div class="frame-corner bl"></div>
-            <div class="frame-corner br"></div>
-            <img src="images/Me.jpeg" alt="Mayura Manawadu">
-          </div>
-          <div class="affiliation-badge">
-            <i class="fas fa-university"></i>
-            <span>University of Melbourne</span>
-          </div>
+        <div class="hero-links" aria-label="Social links">
+          <a href="mailto:samadhikandewela@gmail.com" aria-label="Email Samadhi"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/samadhi-kandewela-3a6786298/" target="_blank" rel="noopener" aria-label="Samadhi on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/Samadhi-Kandewela" target="_blank" rel="noopener" aria-label="Samadhi on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
         </div>
       </div>
-
-      <!-- Stats Row -->
-      <div class="stats-row animate-text delay-5">
-        <a href="https://scholar.google.com/citations?user=5gONoloAAAAJ&hl=en" target="_blank" class="stat-item stat-link" title="View on Google Scholar">
-          <span class="stat-number" data-target="28">0</span>
-          <span class="stat-label">Citations</span>
-        </a>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="8">0</span>
-          <span class="stat-label">Publications</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="2">0</span>
-          <span class="stat-label">h-index</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="6">0</span>
-          <span class="stat-label">Projects</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="3">0</span>
-          <span class="stat-label">Research Areas</span>
-        </div>
-      </div>
+      <a class="hero-next" href="#about" aria-label="Continue to about section">
+        <span>Selected profile</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+      </a>
     </section>
 
-    <!-- RESEARCH SECTION -->
-    <section id="research" class="section research-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">// focus areas</span>
-          <h2 class="section-title">Research</h2>
+    <section class="section about-section" id="about">
+      <div class="section-shell split-layout">
+        <div class="section-heading reveal">
+          <p class="section-kicker">01 · Profile</p>
+          <h2>Engineering with purpose.</h2>
+          <figure class="profile-portrait">
+            <img src="images/samadhi-kandewela.jpg" alt="Portrait of Samadhi Kandewela">
+          </figure>
         </div>
-
-        <div class="research-grid">
-          <div class="research-card primary-card reveal">
-            <div class="research-icon">
-              <i class="fas fa-vr-cardboard"></i>
-            </div>
-            <h3>Mixed Reality</h3>
-            <p>Enabling natural interaction between virtual objects and panoramic real-world environments — depth-based occlusion, contact, and collision in 360° scenes captured with RGB-D.</p>
-            <div class="research-tags">
-              <span class="tag">360° Imaging</span>
-              <span class="tag">Occlusion</span>
-              <span class="tag">RGB-D</span>
-              <span class="tag">LiDAR</span>
-            </div>
-          </div>
-
-          <div class="research-card reveal">
-            <div class="research-icon">
-              <i class="fas fa-cube"></i>
-            </div>
-            <h3>Computer Vision</h3>
-            <p>6DoF pose estimation from single RGB images in uncontrolled environments, focal length estimation, and 3D scene understanding for robotics and AR.</p>
-            <div class="research-tags">
-              <span class="tag">6DoF Pose</span>
-              <span class="tag">Depth Est.</span>
-              <span class="tag">CAD Retrieval</span>
-            </div>
-          </div>
-
-          <div class="research-card reveal">
-            <div class="research-icon">
-              <i class="fas fa-route"></i>
-            </div>
-            <h3>Novel View Synthesis</h3>
-            <p>Generating intermediate views for smooth free-roaming navigation between panoramic nodes — moving through captured scenes rather than teleporting between fixed viewpoints.</p>
-            <div class="research-tags">
-              <span class="tag">NeRF</span>
-              <span class="tag">View Synthesis</span>
-              <span class="tag">Navigation</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Research Pipeline -->
-        <div class="research-pipeline reveal">
-          <div class="pipeline-step">
-            <div class="pipeline-icon"><i class="fas fa-camera-retro"></i></div>
-            <span>360° RGB-D Capture</span>
-          </div>
-          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
-          <div class="pipeline-step">
-            <div class="pipeline-icon"><i class="fas fa-layer-group"></i></div>
-            <span>Depth Fusion</span>
-          </div>
-          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
-          <div class="pipeline-step">
-            <div class="pipeline-icon"><i class="fas fa-project-diagram"></i></div>
-            <span>Scene Graph</span>
-          </div>
-          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
-          <div class="pipeline-step">
-            <div class="pipeline-icon"><i class="fas fa-vr-cardboard"></i></div>
-            <span>MR Interaction</span>
+        <div class="about-copy reveal">
+          <p class="lead">I’m a software engineer and machine learning developer based in Galle, Sri Lanka.</p>
+          <p>My work sits where robust software architecture meets useful AI. I enjoy designing secure backend services, building full-stack products, and developing computer vision systems that can perform under real-world constraints.</p>
+          <p>I am completing my B.Sc. Eng. (Hons) in Computer Engineering at the University of Sri Jayewardenepura, with a minor specialization in Data Management and a current GPA of 3.50/4.00.</p>
+          <div class="profile-facts">
+            <div><span>Based in</span><strong>Galle, Sri Lanka</strong></div>
+            <div><span>Current focus</span><strong>Software Engineering &amp; ML</strong></div>
+            <div><span>Languages</span><strong>Sinhala · English</strong></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- NEWS SECTION -->
-    <section id="news" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">// latest updates</span>
-          <h2 class="section-title">News</h2>
+    <section class="section experience-section" id="experience">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="section-kicker">02 · Experience</p>
+          <h2>Building software in real teams.</h2>
         </div>
-        <div class="scroll-section reveal">
-          <div class="news-timeline">
-
-            <div class="news-item">
-              <div class="news-dot"></div>
-              <div class="news-date-label">Oct 2025</div>
-              <div class="news-card">
-                <span class="news-badge badge-paper">Paper</span>
-                <h3>TARAR at IEEE ISMAR-Adjunct 2025</h3>
-                <p>Paper accepted and presented at the IEEE International Symposium on Mixed and Augmented Reality Adjunct, Daejeon, South Korea.</p>
-              </div>
+        <article class="experience-row reveal">
+          <div class="experience-period">Mar 2025 — Sep 2025</div>
+          <div class="experience-main">
+            <p class="experience-company">Quantum Tunnel Design Pvt Ltd · Sri Lanka</p>
+            <h3>Software Engineer Intern</h3>
+            <p>Developed responsive web applications with reusable React components, integrated RESTful APIs with backend services, and contributed to testing, debugging, code reviews, and Git-based Agile workflows.</p>
+            <div class="tag-list" aria-label="Technologies used">
+              <span>React</span><span>REST APIs</span><span>HTML</span><span>CSS</span><span>Git</span><span>Agile</span>
             </div>
-
-            <div class="news-item">
-              <div class="news-dot"></div>
-              <div class="news-date-label">May 2025</div>
-              <div class="news-card">
-                <span class="news-badge badge-milestone">Milestone</span>
-                <h3>Started PhD at University of Melbourne</h3>
-                <p>Commenced PhD research at the University of Melbourne, focusing on Mixed Reality with panoramic RGB-D imaging and novel view synthesis.</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-dot"></div>
-              <div class="news-date-label">May 2025</div>
-              <div class="news-card">
-                <span class="news-badge badge-milestone">Award</span>
-                <h3>Melbourne Research Scholarship</h3>
-                <p>Awarded the Melbourne Research Scholarship to support full-time PhD candidature at the University of Melbourne.</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-dot"></div>
-              <div class="news-date-label">Feb 2025</div>
-              <div class="news-card">
-                <span class="news-badge badge-milestone">Milestone</span>
-                <h3>MSc Completed — GPA 4.3/4.3</h3>
-                <p>Completed Master of Science at Kyungpook National University, South Korea. Thesis: A Decoupled Approach of 6DoF Object Pose and Camera Focal Length Estimation from Single RGB Image.</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-dot"></div>
-              <div class="news-date-label">Dec 2024</div>
-              <div class="news-card">
-                <span class="news-badge badge-demo">Demo</span>
-                <h3>Open Day Demo — University of Melbourne</h3>
-                <p>Showcased our latest Mixed Reality navigation system at the University of Melbourne Open Day, demonstrating panoramic RGB-D interaction.</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-dot"></div>
-              <div class="news-date-label">May 2024</div>
-              <div class="news-card">
-                <span class="news-badge badge-paper">Paper</span>
-                <h3>ICRA 2024 Workshop — Yokohama, Japan</h3>
-                <p>Presented work on 6DoF pose and focal length estimation at the Workshop on 3D Visual Representations for Robot Manipulation, ICRA 2024.</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-dot"></div>
-              <div class="news-date-label">Mar 2023</div>
-              <div class="news-card">
-                <span class="news-badge badge-milestone">Milestone</span>
-                <h3>KINGS Scholarship — Kyungpook National University</h3>
-                <p>Awarded the KINGS Scholarship to pursue an MSc in Electronic &amp; Electrical Engineering (AI &amp; Signal Processing) at Kyungpook National University, South Korea.</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-dot"></div>
-              <div class="news-date-label">Jul 2022</div>
-              <div class="news-card">
-                <span class="news-badge badge-milestone">Award</span>
-                <h3>Gold Medalist — University of Sri Jayewardenepura</h3>
-                <p>Awarded Gold Medal at the 48th Convocation for outstanding undergraduate academic and extracurricular performance in Computer Engineering.</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-dot"></div>
-              <div class="news-date-label">Feb 2021</div>
-              <div class="news-card">
-                <span class="news-badge badge-paper">Award</span>
-                <h3>Best Track Paper — ICARC 2021</h3>
-                <p>Received Best Track Paper Award in the Data Science &amp; Applications track at the International Conference on Advanced Research in Computing, Sabaragamuwa, Sri Lanka.</p>
-              </div>
-            </div>
-
           </div>
-          <div class="scroll-hint"><span>scroll for more</span> <i class="fas fa-chevron-down"></i></div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- PUBLICATIONS SECTION -->
-    <section id="publications" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">// academic work</span>
-          <h2 class="section-title">Publications</h2>
+    <section class="section projects-section" id="projects">
+      <div class="section-shell">
+        <div class="section-heading projects-heading reveal">
+          <div>
+            <p class="section-kicker">03 · Selected work</p>
+            <h2>Systems designed to be useful.</h2>
+          </div>
+          <a class="text-link" href="https://github.com/Samadhi-Kandewela" target="_blank" rel="noopener">All GitHub work <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
-        <div class="scroll-section reveal">
-        <div class="publication-list">
 
-          <div class="publication-item">
-            <div class="pub-meta">
-              <span class="pub-year">2026</span>
-              <span class="pub-type workshop">Poster</span>
-            </div>
-            <div class="pub-details">
-              <h3>Free-View XR Tours Using 3D Gaussian Splatting with an Avatar Guide</h3>
-              <p class="authors"><strong>M Manawadu</strong>, SW Jeong, L Li, B Chen, T Rhee</p>
-              <p class="venue"><i class="fas fa-map-marker-alt"></i> IEEE VR 2026 · 33rd IEEE Conf. on Virtual Reality and 3D User Interfaces · Daegu, Korea</p>
-              <div class="pub-links">
-                <a href="projects/xr-tours/index.html" class="pub-link">
-                  <i class="fas fa-link"></i> Project
-                </a>
-                <a href="https://www.youtube.com/watch?v=Od2wjh4ugUk" class="pub-link" target="_blank">
-                  <i class="fab fa-youtube"></i> Video
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <div class="pub-meta">
-              <span class="pub-year">2025</span>
-              <span class="pub-type conference">Conference</span>
-            </div>
-            <div class="pub-details">
-              <h3>TARAR: An Intelligent Tour Guide Avatar for Mobile Real-Time Augmented Reality in Heritage Sites</h3>
-              <p class="authors"><strong>M Manawadu</strong>, C Weerasooriya, G Chathuranga, M Wijesinghe, S Wijayarathne, P Perera, T Rhee, U Wijenayake</p>
-              <p class="venue"><i class="fas fa-map-marker-alt"></i> IEEE ISMAR-Adjunct 2025</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00012" class="pub-link" target="_blank">
-                  <i class="fas fa-file-pdf"></i> Paper
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <div class="pub-meta">
-              <span class="pub-year">2025</span>
-              <span class="pub-type journal">Journal</span>
-            </div>
-            <div class="pub-details">
-              <h3>6-DoF Pose Estimation from Single RGB Image and CAD Model Retrieval Using Feature Similarity Measurement</h3>
-              <p class="authors">S Park, WJ Jeong, <strong>M Manawadu</strong>, SY Park</p>
-              <p class="venue"><i class="fas fa-map-marker-alt"></i> Applied Sciences 15 (3)</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.3390/app15031501" class="pub-link" target="_blank">
-                  <i class="fas fa-file-pdf"></i> Paper
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <div class="pub-meta">
-              <span class="pub-year">2024</span>
-              <span class="pub-type journal">Journal</span>
-            </div>
-            <div class="pub-details">
-              <h3>6DoF Object Pose and Focal Length Estimation from Single RGB Images in Uncontrolled Environments</h3>
-              <p class="authors"><strong>M Manawadu</strong>, SY Park</p>
-              <p class="venue"><i class="fas fa-map-marker-alt"></i> Sensors 24 (17), 5474</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.3390/s24175474" class="pub-link" target="_blank">
-                  <i class="fas fa-file-pdf"></i> Paper
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <div class="pub-meta">
-              <span class="pub-year">2024</span>
-              <span class="pub-type workshop">Workshop</span>
-            </div>
-            <div class="pub-details">
-              <h3>Enhancing 6DoF Pose and Focal Length Estimation from Uncontrolled RGB Images for Robotics Vision</h3>
-              <p class="authors"><strong>M Manawadu</strong>, SY Park</p>
-              <p class="venue"><i class="fas fa-map-marker-alt"></i> ICRA 2024 · Workshop on 3D Visual Representations</p>
-              <div class="pub-links">
-                <a href="https://openreview.net/forum?id=86w2P8g7tI" class="pub-link" target="_blank">
-                  <i class="fas fa-file-pdf"></i> Paper
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <div class="pub-meta">
-              <span class="pub-year">2024</span>
-              <span class="pub-type conference">Conference</span>
-            </div>
-            <div class="pub-details">
-              <h3>Advancing 6D Pose Estimation in Augmented Reality — Overcoming Projection Ambiguity with Uncontrolled Imagery</h3>
-              <p class="authors"><strong>M Manawadu</strong>, S Park, SY Park</p>
-              <p class="venue"><i class="fas fa-map-marker-alt"></i> IPIU 2024</p>
-              <div class="pub-links">
-                <a href="http://www.ipiu.or.kr/" class="pub-link" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> Conference
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <div class="pub-meta">
-              <span class="pub-year">2023</span>
-              <span class="pub-type conference">Conference</span>
-            </div>
-            <div class="pub-details">
-              <h3>Predictive Analysis of Accidents Based on US Accident Data</h3>
-              <p class="authors"><strong>M Manawadu</strong>, U Wijenayake</p>
-              <p class="venue"><i class="fas fa-map-marker-alt"></i> ICICM 2023</p>
-              <div class="pub-links">
-                <a href="https://arxiv.org/abs/2309.00908" class="pub-link" target="_blank">
-                  <i class="fas fa-file-pdf"></i> Paper
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <div class="pub-meta">
-              <span class="pub-year">2021</span>
-              <span class="pub-type conference">Conference</span>
-            </div>
-            <div class="pub-details">
-              <h3>Voice-Assisted Real-Time Traffic Sign Recognition System Using Convolutional Neural Network</h3>
-              <p class="authors"><strong>M Manawadu</strong>, U Wijenayake</p>
-              <p class="venue"><i class="fas fa-map-marker-alt"></i> ICARC 2021</p>
-              <div class="pub-links">
-                <a href="https://repo.lib.sab.ac.lk/xmlui/handle/123456789/4156" class="pub-link" target="_blank">
-                  <i class="fas fa-file-pdf"></i> Paper
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="scroll-hint"><span>scroll for more</span> <i class="fas fa-chevron-down"></i></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">// what i've built</span>
-          <h2 class="section-title">Projects</h2>
-        </div>
         <div class="project-grid">
-
-          <div class="project-card reveal tilt-transition project-featured">
-            <div class="project-media">
-              <video muted autoplay loop playsinline>
-                <source src="projects/xr-tours/xrtours.mp4" type="video/mp4">
-              </video>
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="projects/xr-tours/index.html"><i class="fas fa-link"></i> Project Page</a>
-                  <a href="https://www.youtube.com/watch?v=Od2wjh4ugUk" target="_blank"><i class="fab fa-youtube"></i> Video</a>
+          <article class="project-card project-featured reveal" id="coronary-analysis">
+            <div class="featured-project-media">
+              <img src="images/coronary-analysis-system.png" alt="Conceptual interface showing vessel segmentation, stenosis localization, explainability and 3D coronary visualization">
+              <p><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> End-to-end AI analysis pipeline</p>
+            </div>
+            <div class="featured-project-content">
+              <div class="featured-project-main">
+                <div class="project-meta">
+                  <span>Featured final-year project</span>
+                  <time datetime="2025-09">Sept 2025 — Jul 2026</time>
+                </div>
+                <p class="project-type">Final-year project · Applied AI &amp; computer vision</p>
+                <h3>Automated Coronary Angiogram Analysis System</h3>
+                <p class="project-description">A real-time AI system designed to detect, localize and assess coronary artery stenosis from angiogram data, bringing the complete analysis workflow into one integrated pipeline.</p>
+                <div class="tag-list" aria-label="Core technologies">
+                  <span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>OpenCV</span><span>YOLO</span><span>U-Net</span><span>Grad-CAM</span><span>QCA</span>
+                </div>
+                <a class="project-cta" href="https://github.com/Samadhi-Kandewela/angio-ai" target="_blank" rel="noopener">View project on GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              </div>
+              <div class="featured-project-details">
+                <h4>System capabilities</h4>
+                <ul class="capability-list">
+                  <li><i class="fa-solid fa-bezier-curve" aria-hidden="true"></i><span><strong>Segment</strong>Extract coronary vessel structures from angiogram frames.</span></li>
+                  <li><i class="fa-solid fa-crosshairs" aria-hidden="true"></i><span><strong>Detect &amp; localize</strong>Identify potential stenosis and its anatomical location.</span></li>
+                  <li><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i><span><strong>Assess</strong>Support quantitative measurements through QCA.</span></li>
+                  <li><i class="fa-solid fa-cubes" aria-hidden="true"></i><span><strong>Explain &amp; visualize</strong>Combine Grad-CAM insights with 3D coronary visualization.</span></li>
+                </ul>
+                <div class="validation-plan">
+                  <span>Clinical validation plan</span>
+                  <p>Dice · IoU · Precision · Recall · F1 score · Latency</p>
                 </div>
               </div>
             </div>
-            <div class="project-info">
-              <span class="project-tag">IEEE VR 2026 · 3D Gaussian Splatting · XR</span>
-              <h3>Free-View XR Tours with 3D Gaussian Splatting</h3>
-              <p>An XR touring system for free-view exploration of photoreal 3DGS scenes, with an avatar guide delivering proximity-triggered narration. Demonstrated at IEEE VR 2026 with 50+ participants.</p>
-            </div>
-          </div>
+          </article>
 
-          <div class="project-card reveal tilt-transition">
-            <div class="project-media">
-              <video muted autoplay loop playsinline>
-                <source src="images/abhises2.mp4" type="video/mp4">
-              </video>
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="projects/abhises/index.html"><i class="fas fa-link"></i> Project Page</a>
-                  <a href="https://www.youtube.com/embed/3VhgjcyQQ4Q?si=r0srkJI4Qg3rd7bm&amp;start=113" target="_blank"><i class="fab fa-youtube"></i> Video</a>
-                </div>
+          <article class="project-card reveal">
+            <div class="project-index">02</div>
+            <div class="project-copy">
+              <p class="project-type">Distributed systems</p>
+              <h3>HeartSync</h3>
+              <p>A scalable decision-support platform with Spring Boot microservices, service discovery, secure role-based access, event-driven communication, and containerized deployment.</p>
+              <div class="tag-list"><span>Java</span><span>Spring Cloud</span><span>RabbitMQ</span><span>PostgreSQL</span><span>Docker</span></div>
+            </div>
+            <a class="icon-link" href="https://github.com/UshaniSanjana/heart-sync" target="_blank" rel="noopener" aria-label="View HeartSync on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-index">03</div>
+            <div class="project-copy">
+              <p class="project-type">Machine learning · Analytics</p>
+              <h3>TrendScope</h3>
+              <p>A full-stack YouTube trend predictor using NLP preprocessing, topic clustering, viral trend prediction, and AI-assisted content strategy generation.</p>
+              <div class="tag-list"><span>Flask</span><span>React</span><span>PostgreSQL</span><span>scikit-learn</span><span>TypeScript</span></div>
+              <div class="project-text-links">
+                <a href="https://github.com/Samadhi-Kandewela/trendscope-frontend" target="_blank" rel="noopener">Frontend</a>
+                <a href="https://github.com/Samadhi-Kandewela/trendscope-backend" target="_blank" rel="noopener">Backend</a>
               </div>
             </div>
-            <div class="project-info">
-              <span class="project-tag">AR · NLP · Computer Vision</span>
-              <h3>Abhises: Intelligent Virtual Tour Guide</h3>
-              <p>An Intelligent Augmented Reality Tourist Guide leveraging Computer Vision and Deep NLP to simulate a real guide's behavior.</p>
-            </div>
-          </div>
+          </article>
 
-          <div class="project-card reveal tilt-transition">
-            <div class="project-media">
-              <video muted autoplay loop playsinline>
-                <source src="images/focalpose2.mp4" type="video/mp4">
-              </video>
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="projects/6dof/index.html"><i class="fas fa-link"></i> Project Page</a>
-                  <a href="https://www.youtube.com/embed/3VhgjcyQQ4Q?si=r0srkJI4Qg3rd7bm&amp;start=113" target="_blank"><i class="fab fa-youtube"></i> Video</a>
-                </div>
-              </div>
+          <article class="project-card reveal">
+            <div class="project-index">04</div>
+            <div class="project-copy">
+              <p class="project-type">Computer vision</p>
+              <h3>SLIM-Net</h3>
+              <p>A latency-aware coronary artery segmentation model using MobileNetV3-Large, efficient decoder blocks, CBAM attention, and targeted image enhancement.</p>
+              <div class="metric-row"><span><strong>0.902</strong> Dice</span><span><strong>1.81</strong> GFLOPs</span></div>
+              <div class="tag-list"><span>PyTorch</span><span>MobileNetV3</span><span>CBAM</span><span>CUDA</span></div>
             </div>
-            <div class="project-info">
-              <span class="project-tag">Computer Vision · Robotics</span>
-              <h3>6DoF Pose & Focal Length Estimation</h3>
-              <p>A two-stage approach for accurate 6DoF pose estimation in robotics, addressing challenges with single RGB images in uncontrolled environments.</p>
-            </div>
-          </div>
+            <a class="icon-link" href="https://github.com/Samadhi-Kandewela/coronary-vessel-segmentation" target="_blank" rel="noopener" aria-label="View SLIM-Net on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </article>
 
-          <div class="project-card reveal tilt-transition">
-            <div class="project-media">
-              <video muted autoplay loop playsinline>
-                <source src="images/VoiceAssitedRealtimeAccidentPredictionSystem.mp4" type="video/mp4">
-              </video>
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="projects/accident-prediction/index.html"><i class="fas fa-link"></i> Project Page</a>
-                  <a href="https://youtu.be/syQGJfk4cGQ" target="_blank"><i class="fab fa-youtube"></i> Video</a>
-                </div>
-              </div>
+          <article class="project-card reveal">
+            <div class="project-index">05</div>
+            <div class="project-copy">
+              <p class="project-type">Civic technology</p>
+              <h3>Missing Person Finder</h3>
+              <p>A disaster-response platform launched during Sri Lanka’s flood emergency to support public reporting, volunteer verification, and reliable access for affected families.</p>
+              <div class="tag-list"><span>React</span><span>TypeScript</span><span>Supabase</span><span>Netlify</span></div>
             </div>
-            <div class="project-info">
-              <span class="project-tag">ML · Data Science · Safety</span>
-              <h3>Accident Prediction System</h3>
-              <p>Predictive system utilizing US accident data to accurately forecast road accidents and enhance safety.</p>
-            </div>
-          </div>
+            <a class="icon-link" href="https://github.com/DahamAdikari/missing-person-disaster-management" target="_blank" rel="noopener" aria-label="View Missing Person Finder on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </article>
 
-          <div class="project-card reveal tilt-transition">
-            <div class="project-media">
-              <video muted autoplay loop playsinline>
-                <source src="images/TrafficCropped.mp4" type="video/mp4">
-              </video>
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="projects/traffic-sign/index.html"><i class="fas fa-link"></i> Project Page</a>
-                  <a href="https://youtu.be/syQGJfk4cGQ" target="_blank"><i class="fab fa-youtube"></i> Video</a>
-                </div>
-              </div>
+          <article class="project-card project-wide reveal">
+            <div class="project-index">06</div>
+            <div class="project-copy">
+              <p class="project-type">Full-stack platform</p>
+              <h3>SpotFix</h3>
+              <p>A faculty issue-reporting system with photo and location capture, live status tracking, role-based dashboards, and secure PostgreSQL Row Level Security.</p>
+              <div class="tag-list"><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>shadcn/ui</span></div>
             </div>
-            <div class="project-info">
-              <span class="project-tag">CNN · Real-time · Voice AI</span>
-              <h3>Traffic Sign Recognition</h3>
-              <p>Voice-assisted traffic sign recognition system using CNNs, achieving real-time detection with high accuracy.</p>
-            </div>
-          </div>
+          </article>
+        </div>
 
-          <div class="project-card reveal tilt-transition">
-            <div class="project-media">
-              <video muted autoplay loop playsinline>
-                <source src="images/CPPCricketGame.mp4" type="video/mp4">
-              </video>
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="projects/cricket-game/index.html"><i class="fas fa-link"></i> Project Page</a>
-                  <a href="https://github.com/mayura1996/Cricket_Game_using-Cpp" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="project-info">
-              <span class="project-tag">C++ · Game · 1st Place</span>
-              <h3>Console-Based Cricket Game</h3>
-              <p>A C++ console game featuring real-time animations and dynamic player positioning. Winner (1st Place) of the 'Programming for Engineers' course competition.</p>
-            </div>
+        <details class="more-projects reveal">
+          <summary>More projects <i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+          <div class="more-projects-grid">
+            <article><h3>Human Following Robot</h3><p>YOLOv8 person detection, target locking, pose estimation, and multi-layer distance filtering.</p><a href="https://github.com/UshaniSanjana/TurtleBot" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></article>
+            <article><h3>HealHub</h3><p>Mental-health support mobile app with professional connections, scheduling, real-time chat, and chatbot support.</p><a href="https://github.com/shafeekms10/healhub" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></article>
+            <article><h3>RoofMate</h3><p>Mobile boarding-house discovery and booking with maps, favorites, and real-time chat.</p><a href="https://github.com/raveens9/roofmate" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></article>
           </div>
+        </details>
+      </div>
+    </section>
 
+    <section class="section skills-section" id="skills">
+      <div class="section-shell split-layout">
+        <div class="section-heading reveal">
+          <p class="section-kicker">04 · Toolkit</p>
+          <h2>From model training to production APIs.</h2>
+        </div>
+        <div class="skills-list reveal">
+          <div class="skill-row"><h3>Languages</h3><p>Java · Python · C++ · JavaScript · TypeScript · SQL · Dart</p></div>
+          <div class="skill-row"><h3>Backend</h3><p>Spring Boot · Spring Cloud · Flask · REST APIs · SQLAlchemy</p></div>
+          <div class="skill-row"><h3>Frontend</h3><p>React · Flutter · HTML · CSS · Tailwind CSS</p></div>
+          <div class="skill-row"><h3>Data</h3><p>PostgreSQL · Firebase · SQLite</p></div>
+          <div class="skill-row"><h3>ML &amp; Vision</h3><p>PyTorch · TensorFlow · OpenCV · scikit-learn · YOLO</p></div>
+          <div class="skill-row"><h3>Cloud &amp; DevOps</h3><p>Docker · Git · GitHub · AWS Lambda · AWS Educate</p></div>
         </div>
       </div>
     </section>
 
-    <!-- BLOG SECTION -->
-    <section id="blog" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">// beyond research</span>
-          <h2 class="section-title">Travel Blog</h2>
+    <section class="section credentials-section" id="education">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="section-kicker">05 · Education &amp; growth</p>
+          <h2>A strong engineering foundation.</h2>
         </div>
-        <div class="blog-container-wrapper">
-          <button class="scroll-btn left" onclick="scrollBlog('left')"><i class="fas fa-chevron-left"></i></button>
-
-          <div class="blog-grid">
-            <!-- Blog Post 1: July 2024 -->
-            <div id="blog-post-1" class="blog-card reveal tilt-transition" onclick="location.href='blog/1_trafalgar-trip.html'" style="cursor: pointer;">
-              <div class="blog-media tiktok-thumbnail">
-                <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7548394653091941640" data-video-id="7548394653091941640" style="max-width: 605px;min-width: 325px;">
-                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> <a title="srilanka" target="_blank" href="https://www.tiktok.com/tag/srilanka?refer=embed">#srilanka</a> <a title="sinhala" target="_blank" href="https://www.tiktok.com/tag/sinhala?refer=embed">#sinhala</a> <a title="australiasrilanka" target="_blank" href="https://www.tiktok.com/tag/australiasrilanka?refer=embed">#australiasrilanka</a> <a target="_blank" title="♬ original sound - akasasutra - AkasaSutra" href="https://www.tiktok.com/music/original-sound-akasasutra-7530934066972297985?refer=embed">♬ original sound - akasasutra - AkasaSutra</a></section>
-                </blockquote>
-                <script async src="https://www.tiktok.com/embed.js"></script>
-              </div>
-              <div class="blog-info">
-                <div class="blog-header">
-                  <span class="blog-date">July 2024</span>
-                  <span class="blog-tag">Nature</span>
-                </div>
-                <h3>Redwood Forest Escape</h3>
-                <p>Walking through towering ancient redwoods. One of those moments that puts everything in perspective.</p>
-                <a href="blog/1_trafalgar-trip.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
-              </div>
-            </div>
-
-            <!-- Blog Post 2: July 2024 -->
-            <div id="blog-post-2" class="blog-card reveal tilt-transition" onclick="location.href='blog/2_city-fixing-me.html'" style="cursor: pointer;">
-              <div class="blog-media tiktok-thumbnail">
-                <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7549027634445946130" data-video-id="7549027634445946130" style="max-width: 605px;min-width: 325px;">
-                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> This city is fixing me <a title="srilankan_tik_tok🇱🇰" target="_blank" href="https://www.tiktok.com/tag/srilankan_tik_tok%F0%9F%87%B1%F0%9F%87%B0?refer=embed">#srilankan_tik_tok🇱🇰</a> <a target="_blank" title="♬ original sound - C_Sangeeth" href="https://www.tiktok.com/music/original-sound-7533314631520668433?refer=embed">♬ original sound - C_Sangeeth</a></section>
-                </blockquote>
-                <script async src="https://www.tiktok.com/embed.js"></script>
-              </div>
-              <div class="blog-info">
-                <div class="blog-header">
-                  <span class="blog-date">July 2024</span>
-                  <span class="blog-tag">Life</span>
-                </div>
-                <h3>Life in Melbourne</h3>
-                <p>Settling into a new city — the coffee, the laneways, and learning to call Melbourne home.</p>
-                <a href="blog/2_city-fixing-me.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
-              </div>
-            </div>
-
-            <!-- Blog Post 3: Aug 2024 -->
-            <div id="blog-post-3" class="blog-card reveal tilt-transition" onclick="location.href='blog/3_peaceful-moments.html'" style="cursor: pointer;">
-              <div class="blog-media tiktok-thumbnail">
-                <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7558132061211593992" data-video-id="7558132061211593992" style="max-width: 605px;min-width: 325px;">
-                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> How peaceful their lives are <a title="srilanka_aus" target="_blank" href="https://www.tiktok.com/tag/srilanka_aus?refer=embed">#srilanka_aus</a> <a target="_blank" title="♬ original sound - Dinakshie Saranga" href="https://www.tiktok.com/music/original-sound-7551696388539599617?refer=embed">♬ original sound - Dinakshie Saranga</a></section>
-                </blockquote>
-                <script async src="https://www.tiktok.com/embed.js"></script>
-              </div>
-              <div class="blog-info">
-                <div class="blog-header">
-                  <span class="blog-date">Aug 2024</span>
-                  <span class="blog-tag">Nature</span>
-                </div>
-                <h3>Peaceful Moments</h3>
-                <p>Taking a break from the PhD grind to appreciate the stillness of nature with good friends.</p>
-                <a href="blog/3_peaceful-moments.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
-              </div>
-            </div>
-
-            <!-- Blog Post 4: Aug 2024 -->
-            <div id="blog-post-4" class="blog-card reveal tilt-transition" onclick="location.href='blog/4_camping-horsham.html'" style="cursor: pointer;">
-              <div class="blog-media tiktok-thumbnail">
-                <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7557336609339804936" data-video-id="7557336609339804936" style="max-width: 605px;min-width: 325px;">
-                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> Camping in Horsham, Victoria - Walkers Lake <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ Snow On The Beach - Taylor Swift" href="https://www.tiktok.com/music/Snow-On-The-Beach-7156822419338954754?refer=embed">♬ Snow On The Beach - Taylor Swift</a></section>
-                </blockquote>
-                <script async src="https://www.tiktok.com/embed.js"></script>
-              </div>
-              <div class="blog-info">
-                <div class="blog-header">
-                  <span class="blog-date">Aug 2024</span>
-                  <span class="blog-tag">Travel</span>
-                </div>
-                <h3>Camping in Horsham</h3>
-                <p>Under the stars at Walkers Lake. A perfect weekend getaway with friends.</p>
-                <a href="blog/4_camping-horsham.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
-              </div>
-            </div>
-
-            <!-- Blog Post 5: Oct 2024 -->
-            <div id="blog-post-5" class="blog-card reveal tilt-transition" onclick="location.href='blog/5_life-in-australia.html'" style="cursor: pointer;">
-              <div class="blog-media tiktok-thumbnail">
-                <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7577402364173258004" data-video-id="7577402364173258004" style="max-width: 605px;min-width: 325px;">
-                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> <a title="australia" target="_blank" href="https://www.tiktok.com/tag/australia?refer=embed">#australia</a> <a target="_blank" title="♬ Madhurabani - Yasas Medagedara" href="https://www.tiktok.com/music/Madhurabani-7159377828427876354?refer=embed">♬ Madhurabani - Yasas Medagedara</a></section>
-                </blockquote>
-                <script async src="https://www.tiktok.com/embed.js"></script>
-              </div>
-              <div class="blog-info">
-                <div class="blog-header">
-                  <span class="blog-date">Oct 2024</span>
-                  <span class="blog-tag">Travel</span>
-                </div>
-                <h3>Trip to Trafalgar</h3>
-                <p>A weekend escape from Melbourne with the Unimelb HCI group — forests, fresh air, and good company.</p>
-                <a href="blog/5_life-in-australia.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
-              </div>
-            </div>
-
-            <!-- Blog Post 6: Jan 2025 -->
-            <div id="blog-post-6" class="blog-card reveal tilt-transition" onclick="location.href='blog/6_summer-break-sri-lanka.html'" style="cursor: pointer;">
-              <div class="blog-media tiktok-thumbnail">
-                <div class="click-overlay"></div>
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mayu_mmp/video/7587831358265822485" data-video-id="7587831358265822485" style="max-width: 605px;min-width: 325px;">
-                  <section><a target="_blank" title="@mayu_mmp" href="https://www.tiktok.com/@mayu_mmp?refer=embed">@mayu_mmp</a> 2025 Summer Break - Sri Lanka <a title="srilanka" target="_blank" href="https://www.tiktok.com/tag/srilanka?refer=embed">#srilanka</a> <a target="_blank" title="♬ original sound - Mayura 🇱🇰🇦🇺" href="https://www.tiktok.com/music/original-sound-7587831675763247879?refer=embed">♬ original sound - Mayura 🇱🇰🇦🇺</a></section>
-                </blockquote>
-                <script async src="https://www.tiktok.com/embed.js"></script>
-              </div>
-              <div class="blog-info">
-                <div class="blog-header">
-                  <span class="blog-date">Jan 2025</span>
-                  <span class="blog-tag">Adventure</span>
-                </div>
-                <h3>Summer Break — Sri Lanka</h3>
-                <p>Back in Sri Lanka! The waves, the food, and the vibes are unmatched. Check out my summer highlights.</p>
-                <a href="blog/6_summer-break-sri-lanka.html" class="blog-link">Watch Story <i class="fas fa-play-circle"></i></a>
-              </div>
-            </div>
+        <div class="credentials-grid">
+          <div class="credential-block reveal">
+            <h3>Education</h3>
+            <article>
+              <span>2022 — Present</span>
+              <h4>B.Sc. Eng. (Hons) in Computer Engineering</h4>
+              <p>University of Sri Jayewardenepura · Faculty of Engineering</p>
+              <small>GPA 3.50 / 4.00 · Minor in Data Management</small>
+            </article>
+            <article>
+              <span>2021</span>
+              <h4>Software Engineering Studies</h4>
+              <p>Institute of Java Software Engineering, Galle</p>
+            </article>
           </div>
-
-          <button class="scroll-btn right" onclick="scrollBlog('right')"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">// let's connect</span>
-          <h2 class="section-title">Get In Touch</h2>
-        </div>
-        <div class="contact-content reveal">
-          <p class="contact-intro">Open to research collaborations, discussions about Mixed Reality and Computer Vision, or just a friendly chat.</p>
-          <a href="mailto:mmayurapavan@gmail.com" class="contact-email">
-            <i class="fas fa-envelope"></i>
-            mmayurapavan@gmail.com
-          </a>
-          <div class="contact-actions">
-            <a href="assets/cv.pdf" class="btn btn-primary" target="_blank">
-              <i class="fas fa-download"></i> Download CV
-            </a>
+          <div class="credential-block reveal">
+            <h3>Certifications</h3>
+            <ul class="clean-list">
+              <li><i class="fa-brands fa-aws" aria-hidden="true"></i><span><strong>Introduction to Cloud 101</strong>AWS Educate</span></li>
+              <li><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span><strong>Introduction to Cybersecurity</strong>Cisco Networking Academy</span></li>
+              <li><i class="fa-brands fa-meta" aria-hidden="true"></i><span><strong>HTML and CSS in Depth</strong>Meta · Coursera</span></li>
+            </ul>
           </div>
-          <div class="social-links large">
-            <a href="https://scholar.google.com/citations?user=5gONoloAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.linkedin.com/in/mayuramanawadu/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/mayura_pavan" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/mayura1996" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <div class="credential-block reveal">
+            <h3>Leadership</h3>
+            <ul class="timeline-list">
+              <li><span>2025</span><p><strong>Editor</strong> · Computer Engineering Society (CENSOC)</p></li>
+              <li><span>2024</span><p><strong>Organizing Committee</strong> · NerdCircle 24’</p></li>
+              <li><span>2025</span><p><strong>Hackathon Participant</strong> · InnovateX, Zebra Technologies</p></li>
+              <li><span>Present</span><p><strong>Student Member</strong> · Institution of Engineers Sri Lanka</p></li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="contact-section" id="contact">
+      <div class="section-shell contact-inner reveal">
+        <p class="section-kicker">06 · Let’s connect</p>
+        <h2>Have a problem worth solving?</h2>
+        <p>I’m open to software engineering, backend, full-stack, and machine learning opportunities where thoughtful engineering makes a real difference.</p>
+        <a class="contact-email" href="mailto:samadhikandewela@gmail.com">samadhikandewela@gmail.com <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <div class="contact-actions">
+          <a class="button button-light" href="assets/Samadhi-Kandewela-Resume.pdf" target="_blank" rel="noopener">View resume <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i></a>
+          <a class="button button-outline-light" href="https://www.linkedin.com/in/samadhi-kandewela-3a6786298/" target="_blank" rel="noopener">LinkedIn <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a class="button button-outline-light" href="https://github.com/Samadhi-Kandewela" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <span class="footer-logo"><span class="logo-bracket">[</span>MM<span class="logo-bracket">]</span></span>
-      <p>Mayura Manawadu · PhD Candidate · University of Melbourne · &copy; 2025</p>
+  <footer class="site-footer">
+    <div class="section-shell">
+      <p>© <span id="year"></span> Samadhi Kandewela</p>
+      <a href="#top">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
